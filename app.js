@@ -1,9 +1,11 @@
 'use strict';
 
-const fs = require('fs');
 const read = require('./mod/readFile');
 const write = require('./mod/writeFile');
 const upper =require('./mod/upper');
+const event = require('./events/emit');
+require('./events/logger');
+require('./events/error');
 
 /**
  *@param {Object} file
@@ -13,11 +15,14 @@ const upper =require('./mod/upper');
 const alterFile = (file) => {
   read(file)
     .then(data => {
-      write(file, Buffer.from(upper(data)))
+      write(file, Buffer.from(upper(data)));
     })
-    .then(console.log(`${file} saved`))
-  };
+    .then(event.emit('log', 'saved'))
+    .catch(event.emit('error', 'an eror has occured'));
+};
 
 let file = process.argv.slice(2).shift();
+
+
 alterFile(file);
 
