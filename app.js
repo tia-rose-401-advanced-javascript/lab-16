@@ -1,43 +1,23 @@
 'use strict';
 
 const fs = require('fs');
+const read = require('./mod/readFile');
+const write = require('./mod/writeFile');
+const upper =require('./mod/upper');
+
 /**
- *
- *
- * @param {Object} file
+ *@param {Object} file
  * @desc Alters any file that is passed through, changing all of its contents to uppercase.
  */
+
 const alterFile = (file) => {
-
-
-
-
-  
-  
-  fs.readFile( file, (err, data) => { //error first callback
-    if(err) { throw err; }
-  });
-
-  fs.readFile(file, (data) => {
-    return new Promise ((resolve, reject) => {
-      if(!file) reject(new Error('no file passed'))
-      resolve(file)
-
-
+  read(file)
+    .then(data => {
+      write(file, Buffer.from(upper(data)))
     })
-
-  })
-  
-
-
-
-    let text = data.toString().toUpperCase();
-
-    fs.writeFile( file, Buffer.from(text), (err, data) => {
-      if(err) { throw err; }
-      console.log(`${file} saved`);
-    });
-};
+    .then(console.log(`${file} saved`))
+  };
 
 let file = process.argv.slice(2).shift();
 alterFile(file);
+
