@@ -5,9 +5,11 @@ Event Driven Applications
 
 ### Author: Tia Rose
 
+[![Build Status](https://www.travis-ci.com/tia-rose-401-advanced-javascript/lab-15.svg?branch=dev)](https://www.travis-ci.com/tia-rose-401-advanced-javascript/lab-15)
+
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
+* [submission PR](https://github.com/tia-rose-401-advanced-javascript/lab-16/pull/1)
+* [travis](https://www.travis-ci.com/tia-rose-401-advanced-javascript/lab-15)
 
 
 #### Documentation
