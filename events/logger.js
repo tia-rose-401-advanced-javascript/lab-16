@@ -4,7 +4,6 @@ const events = require('./emit');
 
 
 /**
- *
  * @param {object} event
  * @desc a logger emitter that console.logs the event and the time
  */

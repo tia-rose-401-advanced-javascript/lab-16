@@ -3,8 +3,6 @@
 const events = require('./emit');
 
 /**
- *
- *
  * @param {error} error
  * @desc an error emitter that console.logs a custom error message
  */

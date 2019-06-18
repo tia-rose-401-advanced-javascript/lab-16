@@ -17,6 +17,8 @@ const alterFile = (file) => {
     .then(data => {
       write(file, Buffer.from(upper(data)));
     })
+
+    
     .then(event.emit('log', 'saved'))
     .catch(event.emit('error', 'an eror has occured'));
 };
