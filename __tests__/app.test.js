@@ -4,6 +4,7 @@
 const event = require('../events/emit');
 require('../events/logger');
 require('../events/error.js');
+const upper = require('../mod/upper');
 
 
 const mocks = require('../__mocks__/fs.js');
@@ -16,6 +17,16 @@ let writeFile = mocks.writeFile;
  * log test
    * @desc logger test function
    */
+
+
+describe('Upper', () => {
+  it('should return a string in all uppercase', () => {
+    let str = 'hello';
+    str = upper(str);
+    expect('str').toBe('HELLO');
+
+  });
+});
 
 describe('logger emitter', () => {
   it('logs the event and the time', () => {
@@ -33,8 +44,8 @@ describe('logger emitter', () => {
 
 describe('error emitter', () => {
   it('logs a custom error message', () => {
-    let spy = jest.spyOn(console, 'log');
-    event.emit('error', 'log');
+    let spy = jest.spyOn(console, 'error');
+    event.emit('error');
     expect(spy).toHaveBeenCalled();
     spy.mockRestore();
   });

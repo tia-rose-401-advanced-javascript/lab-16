@@ -13,13 +13,24 @@ Event Driven Applications
 
 
 #### Documentation
-* [jsdoc](./docs/index.html) (Server assignments)
+* [jsdoc](./docs/global.html) (Server assignments)
 
 
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+Exported Values and Methods
+
+### Setup
+
+Running the app
+
+`npm start`
+
+### Tests
+How do you run tests?
+
+`npm test`
+
+What assertions were made?
+What assertions need to be / should be made?
 
 #### UML
 ![UML Diagram](./assets/UML-16.jpg)

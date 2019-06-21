@@ -20,11 +20,11 @@ const alterFile = (file) => {
 
     
     .then(event.emit('log', 'saved'))
-    .catch(event.emit('error', 'an eror has occured'));
+    .catch(error =>{
+      event.emit('error', error);
+    });
 };
 
 let file = process.argv.slice(2).shift();
-
-
 alterFile(file);
 
