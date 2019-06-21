@@ -13,8 +13,7 @@ Event Driven Applications
 
 
 #### Documentation
-* [jsdoc](./docs/global.html) (Server assignments)
-
+* [jsdoc](localhost:3000/docs/global.html) or open index.html file  found in the files docs directory
 
 Exported Values and Methods
 
@@ -29,8 +28,6 @@ How do you run tests?
 
 `npm test`
 
-What assertions were made?
-What assertions need to be / should be made?
 
 #### UML
 ![UML Diagram](./assets/UML-16.jpg)
