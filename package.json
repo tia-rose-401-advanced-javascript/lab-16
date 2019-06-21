@@ -4,15 +4,29 @@
   "description": "Events Lab",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js file.txt",
     "test": "jest --verbose --coverage",
     "lint": "eslint **/*.js",
-    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "doc": "0.0.3",
     "eslint": "^5.16.0",
-    "jest": "^23.6.0"
-  }
+    "jest": "^23.6.0",
+    "jsdoc": "^3.6.2"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tia-rose-401-advanced-javascript/lab-16.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tia-rose-401-advanced-javascript/lab-16/issues"
+  },
+  "homepage": "https://github.com/tia-rose-401-advanced-javascript/lab-16#readme"
 }
