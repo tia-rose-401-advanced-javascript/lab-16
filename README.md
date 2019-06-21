@@ -13,7 +13,7 @@ Event Driven Applications
 
 
 #### Documentation
-* [jsdoc](localhost:3000/docs/global.html) or open index.html file  found in the files docs directory
+* [jsdoc](localhost:3000/docs/global.html) or open index.html file  found in the docs directory
 
 Exported Values and Methods
 
